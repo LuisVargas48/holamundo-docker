@@ -6,7 +6,9 @@ services:
   ports:
    - 82:5173
   volumes: 
-   - ./frontend/src:/app/src 
+   - ./frontend/src:/app/src
+  environment:
+     VITE_API_URL: http://localhost:3000  
  api:
   build: ./backend
   ports:
